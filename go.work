@@ -1,0 +1,8 @@
+go 1.21.5
+
+use (
+	./maelstrom-broadcast
+	./maelstrom-echo
+	./maelstrom-multi-broadcast
+	./maelstrom-unique-ids
+)
