@@ -20,6 +20,12 @@ func main() {
 		value := int(body["message"].(float64))
 		stored_msg = append(stored_msg, value)
 
+		for _, node := range n.NodeIDs() {
+			if node != n.ID() {
+				go n.Send(node, body)
+			}
+		}
+
 		return n.Reply(msg, map[string]any{
 			"type": "broadcast_ok",
 		})
