@@ -2,6 +2,7 @@ go 1.21.5
 
 use (
 	./maelstrom-broadcast
+	./maelstrom-counter
 	./maelstrom-echo
 	./maelstrom-multi-broadcast
 	./maelstrom-multi-broadcast-efficient
