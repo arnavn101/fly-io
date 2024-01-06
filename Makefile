@@ -31,3 +31,7 @@ multi-broadcast: clean
 multi-broadcast-ft: clean
 	go build -C maelstrom-multi-broadcast-ft -o maelstrom-multi-broadcast-ft.out
 	$(MAELSTROM_BIN) test -w broadcast --bin maelstrom-multi-broadcast-ft/maelstrom-multi-broadcast-ft.out --node-count 5 --time-limit 20 --rate 10 --nemesis partition
+
+multi-broadcast-efficient: clean
+	go build -C maelstrom-multi-broadcast-efficient -o maelstrom-multi-broadcast-efficient.out
+	$(MAELSTROM_BIN) test -w broadcast --bin maelstrom-multi-broadcast-efficient/maelstrom-multi-broadcast-efficient.out --node-count 25 --time-limit 20 --rate 100 --latency 100

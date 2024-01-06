@@ -4,6 +4,7 @@ use (
 	./maelstrom-broadcast
 	./maelstrom-echo
 	./maelstrom-multi-broadcast
+	./maelstrom-multi-broadcast-efficient
 	./maelstrom-multi-broadcast-ft
 	./maelstrom-unique-ids
 )
