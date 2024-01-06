@@ -2,12 +2,15 @@
 MAELSTROM_BIN = ./maelstrom/maelstrom
 
 clean:
-	rm -fr test
+	rm -fr store
 
 dup:
 	cp -fr $(OLD) $(NEW)
 	sed -i 's/$(OLD)/$(NEW)/g' $(NEW)/go.mod
 	go work use $(NEW)
+
+analyze:
+	$(MAELSTROM_BIN) serve
 
 echo: clean
 	go build -C maelstrom-echo -o maelstrom-echo.out
